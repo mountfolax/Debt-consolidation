@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Debt Consolidation</title>
+  </head>
+  <body class="font-sans">
+    <div class="container mx-auto mt-[20px] px-4">
+      <h1 class="text-2xl font-bold">Debt Consolidation Savings Calculator</h1>
+      <p>
+        Enter the details of your current unsecured debt and see how much you
+        may be able to save after consolidating the debts into a single loan.
+        Only includes credit card debt, medical debt, personal loan debt and
+        other types of unsecured debt.
+      </p>
+
+      <div class="mt-[30px]">
+        <h2 class="text-xl font-bold mb-[15px]">ENTER YOUR CURRENT DEBTS</h2>
+
+        <div class="contatiner flex flex-wrap gap-x-[15px] gap-y-[10px]">
+          <div class="flex flex-col gap-y-[5px]">
+            <label for="DEBT NAME" class="text-sm">DEBT NAME</label>
+            <input
+              type="text"
+              placeholder="e.g medical"
+              class="bg-blue-100 w-[10rem] border border-[2px] border-gray-300 outline-none p-[5px] w-[13rem]"
+            />
+          </div>
+
+          <div class="flex flex-col gap-y-[5px]">
+            <label for="REMAINING DEBT AMOUNT" class="text-sm"
+              >REMAINING DEBT AMOUNT</label
+            >
+            <div class="flex border-[2px] border-gray-300 w-[13rem]">
+              <span class="p-[5px] border-r-gray-300 border-r-[2px]">$</span>
+              <input
+                type="number"
+                placeholder="5000"
+                class="bg-blue-100 w-[11.45rem] py-[5px] pl-[10px] border-none outline-none"
+              />
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-y-[5px]">
+            <label for="CURRENT APR" class="text-sm">CURRENT APR</label>
+            <div class="border-[2px] border-gray-300 w-[13rem] flex">
+              <input
+                type="number"
+                placeholder="15.99"
+                class="bg-blue-100 w-[11rem] p-[5px] outline-none border-none"
+              />
+              <span class="p-[5px] border-l-gray-300 border-l-[2px]">%</span>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-y-[5px]">
+            <label for="CURRENT MONTHLY PAYMENT" class="text-sm"
+              >CURRENT MONTHLY PAYMENT</label
+            >
+            <div class="border-[2px] border-gray-300 w-[13rem] flex">
+              <span class="p-[5px] border-r-gray-300 border-r-[2px]">$</span>
+              <input
+                type="number"
+                placeholder="200"
+                class="bg-blue-100 border-none outline-none p-[5px] w-[11.45rem]"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-5">
+        <button
+          class="font-[500] text-blue-500 block mb-2 cursor-pointer flex items-center"
+        >
+          <span class="text-3xl font-extrabold mb-2 mr-1">+</span>
+          Add Another Debt
+        </button>
+
+        <button
+          class="bg-blue-500 rounded-sm text-white text-center block cursor-pointer w-full p-[5px]"
+        >
+          Calculate Savings
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
