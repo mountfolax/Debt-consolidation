@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Debt Consolidation</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body class="font-sans">
     <div class="container mx-auto mt-[20px] px-4">
@@ -19,10 +20,11 @@
       <div class="mt-[30px]">
         <h2 class="text-xl font-bold mb-[15px]">ENTER YOUR CURRENT DEBTS</h2>
 
-        <div class="contatiner flex flex-wrap gap-x-[15px] gap-y-[10px]">
+        <div class="contatiner flex flex-wrap gap-x-[15px] gap-y-[10px]" id="view">
           <div class="flex flex-col gap-y-[5px]">
             <label for="DEBT NAME" class="text-sm">DEBT NAME</label>
             <input
+            id="DEBT NAME"
               type="text"
               placeholder="e.g medical"
               class="bg-blue-100 w-[10rem] border border-[2px] border-gray-300 outline-none p-[5px] w-[13rem]"
@@ -36,9 +38,10 @@
             <div class="flex border-[2px] border-gray-300 w-[13rem]">
               <span class="p-[5px] border-r-gray-300 border-r-[2px]">$</span>
               <input
+              id="REMAINING DEBT AMOUNT"
                 type="number"
                 placeholder="5000"
-                class="bg-blue-100 w-[11.45rem] py-[5px] pl-[10px] border-none outline-none"
+                class="bg-blue-100 w-[11.45rem] py-[5px] pl-[10px] border-none outline-none remaning_debt"
               />
             </div>
           </div>
@@ -47,9 +50,10 @@
             <label for="CURRENT APR" class="text-sm">CURRENT APR</label>
             <div class="border-[2px] border-gray-300 w-[13rem] flex">
               <input
+              id="CURRENT APR"
                 type="number"
                 placeholder="15.99"
-                class="bg-blue-100 w-[11rem] p-[5px] outline-none border-none"
+                class="bg-blue-100 w-[11rem] p-[5px] outline-none border-none aPr"
               />
               <span class="p-[5px] border-l-gray-300 border-l-[2px]">%</span>
             </div>
@@ -62,9 +66,11 @@
             <div class="border-[2px] border-gray-300 w-[13rem] flex">
               <span class="p-[5px] border-r-gray-300 border-r-[2px]">$</span>
               <input
+
                 type="number"
                 placeholder="200"
-                class="bg-blue-100 border-none outline-none p-[5px] w-[11.45rem]"
+                class="bg-blue-100 border-none outline-none p-[5px] w-[11.45rem] montlyPayment" 
+                id="CURRENT MONTHLY PAYMENT current"
               />
             </div>
           </div>
@@ -73,18 +79,26 @@
 
       <div class="mt-5">
         <button
-          class="font-[500] text-blue-500 block mb-2 cursor-pointer flex items-center"
+          class="font-[500] text-blue-500 block mb-2 cursor-pointer flex items-center" id="add_btn"
         >
           <span class="text-3xl font-extrabold mb-2 mr-1">+</span>
           Add Another Debt
         </button>
 
-        <button
+        <button id="calcBtn"
           class="bg-blue-500 rounded-sm text-white text-center block cursor-pointer w-full p-[5px]"
         >
           Calculate Savings
         </button>
       </div>
     </div>
+
+
+    <div class="output" id="output">
+
+
+    </div>
+
+    <script src="index.js"></script>
   </body>
 </html>
